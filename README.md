@@ -3,9 +3,10 @@
 ## Description:
 Scripts related to results presented in Dufva and Pölönen et al.
 
-- Modify the **working directory and GIT_HOME** to the scripts
+- Modify the **working directory** to the scripts
 - setwd("path/data"), download data from 
-- GIT_HOME (folder where git folder was cloned)
+
+- Modify the **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME points to **common_scripts** that contains various tools that were used in the analysis
 
 ## Scripts to reproduce the analysis, plots and tables
 
@@ -70,6 +71,7 @@ Statistical_analysis_correlations_TCGA_AML.R (TableS3-5)
 Statistical_analysis_correlations_TCGA_DLBCL.R
 ```
 ## Scripts related to data preprocessing (under folder preprocessing)
+These scripts are for reference only. Raw data and input data would have to be downloaded and processed for these scripts. Check the publication for raw data accession codes.
 
 #### Data Preprocessing
 ```
@@ -86,7 +88,6 @@ Preprocessing_coMMpass_featurematrix_generation.R
 Preprocessing_GSE98588_DLBCL_featurematrix_generation.R
 Preprocessing_PanALL.R
 ```
-
 #### Subtype analysis for each cohort
 ```
 Preprocessing_MM_subtyping.R
@@ -94,7 +95,6 @@ Preprocessing_DLBCL_subtyping.R
 Preprocessing_ALL_subtyping.R
 Preprocessing_AML_subtyping.R
 ```
- 
 #### Methylation data processing
 ```
 Preprocessing_TCGA_AML_add_meth_probes.R
@@ -102,7 +102,6 @@ Preprocessing_TCGA_meth_data_genelist.R
 Preprocessing_FIMM_AML_RRBS.R
 Preprocessing_AML_RRBS_meth_de_analysis.R
 ```
- 
 #### scRNA data preprocessing for statistical analysis
 ```
 Preprocessing_scRNA_CLL_GSE111014.R
