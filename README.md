@@ -3,10 +3,9 @@
 ## Description:
 Scripts related to results presented in Dufva and Pölönen et al.
 
-- Modify the **working directory** to the scripts
-- setwd("path/data"), download data from 
+- Modify the **working directory** to the scripts. setwd("path/data"), download data from ADD.
 
-- Modify the **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME points to **common_scripts** that contains various tools that were used in the analysis
+- Modify the **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
 
 ## Scripts to reproduce the analysis, plots and tables
 
