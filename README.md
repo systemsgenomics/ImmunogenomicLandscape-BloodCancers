@@ -70,12 +70,14 @@ Statistical_analysis_correlations_TCGA_AML.R (TableS3-5)
 Statistical_analysis_correlations_TCGA_DLBCL.R
 ```
 ## Scripts related to data preprocessing (under folder preprocessing)
+
+#### Data Preprocessing
 ```
-## Data Preprocessing
 Preprocessing_CIBERSORT_MCPcounter.R
 Preprocessing_normalize_hguarray_GSE98588.R
-
-## Generating featurematrix for each cohort
+```
+#### Generating featurematrix for each cohort
+```
 Preprocessing_Hemap_featurematrix_generation.R (TableS1)
 Preprocessing_REDDY_DLBCL_featurematrix_generation.R
 Preprocessing_TCGA_AML_featurematrix_generation.R
@@ -83,20 +85,26 @@ Preprocessing_TCGA_DLBCL_featurematrix_generation.R
 Preprocessing_coMMpass_featurematrix_generation.R
 Preprocessing_GSE98588_DLBCL_featurematrix_generation.R
 Preprocessing_PanALL.R
- 
-## Subtype analysis for each cohort
+```
+
+#### Subtype analysis for each cohort
+```
 Preprocessing_MM_subtyping.R
 Preprocessing_DLBCL_subtyping.R
 Preprocessing_ALL_subtyping.R
 Preprocessing_AML_subtyping.R
+```
  
-## Methylation data processing
+#### Methylation data processing
+```
 Preprocessing_TCGA_AML_add_meth_probes.R
 Preprocessing_TCGA_meth_data_genelist.R
 Preprocessing_FIMM_AML_RRBS.R
 Preprocessing_AML_RRBS_meth_de_analysis.R
+```
  
-## scRNA data preprocessing for statistical analysis
+#### scRNA data preprocessing for statistical analysis
+```
 Preprocessing_scRNA_CLL_GSE111014.R
 Preprocessing_scRNA_FIMM_AML.R
 Preprocessing_scRNA_Galen_AML.R
