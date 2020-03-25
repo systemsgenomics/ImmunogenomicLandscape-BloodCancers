@@ -3,21 +3,27 @@
 ## Description:
 Scripts related to results presented in Dufva and Pölönen et al.
 
-- Modify the **working directory and GIT_HOME** to the scripts to reproduce the analysis, plots and tables
+- Modify the **working directory and GIT_HOME** to the scripts
 - setwd("path/data"), download data from 
 - GIT_HOME (folder where git folder was cloned)
 
+# Scripts to reproduce the analysis, plots and tables
 
-Figure 1, Figure S1:
+### Figure 1, Figure S1:
+```
 Fig1_plots.R (Figure 1F-H)
 Statistical_analysis_Cytolytic_Score_development.R (FigureS1B, G-I)
- 
-Figure 2, Figure S2 and Table S2:
+```
+### Figure 2, Figure S2 and Table S2:
+```
 Fig2_microenvironment_analysis.R (TableS2, Fig2A-B, FigS2C)
 FigS2AB_microenvironment_analysis_GSEA_GSVA.R (FigS2A-B)
 FigS2DE_microenvironment_validation_CLL_AML.R (FigS2D-E)
- 
-Figure 3, Figure S3 and Table S3:
+```
+	
+### Figure 3, Figure S3 and Table S3:
+
+```
 Fig3_plots_scRNA.R  (Fig3F-H and K, FigS3K and O)
 Fig3_FigS3_MDSsignature.R (Fig3E, FigS3D)
 FigS3L.R (TableS3 tab, FigS3L)
@@ -25,8 +31,10 @@ Statistical_analysis_DE_analysis_MDSlike.R (TableS3 tab)
 Statistical_analysis_scRNA_MDSlike_analysis.R  (TableS3 tabs)
 Statistical_analysis_Szabo_TCell_analysis.R (Fig3I, FigS3M)
 Statistical_analysis_Yang_NKCell_analysis.R (Fig3J, FigS3N)
+```
 
-Figure 4, Figure S4 and Table S4:
+### Figure 4, Figure S4 and Table S4:
+```
 Statistical_analysis_HLAII_Score_development.R (FigS4A-B)
 Fig4D_TCGA_AML_complexheatmap_CIITA.R (Fig4D)
 FigS4EF_CIITA_methylation_validation_ERRBS.R (FigS4E-F)
@@ -34,40 +42,49 @@ FigS4K_CCLE_CIITA_methylation.R (FigS4K)
 FigS4J_CIITA_methylation_validation_GSE49031.R (FigS4J)
 FigS4D_TCGA_AML_global_hypermethylation.R (FigS4D)
 Statistical_analysis_FIMM_AML_RRBS.R (Fig4G and H, FigS4L)
- 
-Figure 5, Figure S5 and Table S5:
+```
+
+### Figure 5, Figure S5 and Table S5:
+```
 Fig5_DE_analysis_costim.R  (Fig5B, FigS5B, Table S5 tabs)
 FigS5C.R (FigS5C)
- 
-Figure 6, Figure S6 and Table S6:
+```
+
+### Figure 6, Figure S6 and Table S6:
+```
 Fig6B_S6F_CGA_tSNEplot_hemap.R (Fig6B, FigS6F)
 Fig6C_S6B_CGA_Hemap.R (Fig6C, FigS6B)
 Fig6H_FigS6H_CGA_heatmap_GSE98588.R (Fig6H, FigS6H, FigS6I)
 FigS6G_CGA_GSEA_hemapMM.R (FigS6G)
 Fig6D_CCLE_CGA_methylation.R (Fig6D)
 Statistical_analysis_CGA_discovery_Hemap.R
- 
-Figure 7, Figure S7 and Table S7:
+```
+
+### Figure 7, Figure S7 and Table S7:
+```
 Fig7_Univariate_Coxph_survival.R (TableS7)
 Fig7_univariate_survival_forestplot.R (Fig7A, Fig7B-D, FigS7A-B, )
 Fig7_multivariable_regression_eNet_survival.R (Fig7E-F, FigS7C-G)
- 
-Statistical association analysis, Supplementary tables
+```
+
+### Statistical association analysis, Supplementary tables
+```
 Statistical_analysis_correlations_BeatAML.R (TableS3-5)
 Statistical_analysis_correlations_CoMMpass.R (TableS4-6)
 Statistical_analysis_correlations_GSE98588_DLBCL.R (TableS3-6)
 Statistical_analysis_correlations_Reddy.R (TableS3-5)
 Statistical_analysis_correlations_TCGA_AML.R (TableS3-5)
 Statistical_analysis_correlations_TCGA_DLBCL.R
+```
 
-
-Scripts related to data preprocessing
+# Scripts related to data preprocessing (under folder preprocessing)
  
-Data Preprocessing
+```
+## Data Preprocessing
 Preprocessing_CIBERSORT_MCPcounter.R
 Preprocessing_normalize_hguarray_GSE98588.R
 
-Generating featurematrix for each cohort
+## Generating featurematrix for each cohort
 Preprocessing_Hemap_featurematrix_generation.R (TableS1)
 Preprocessing_REDDY_DLBCL_featurematrix_generation.R
 Preprocessing_TCGA_AML_featurematrix_generation.R
@@ -76,19 +93,19 @@ Preprocessing_coMMpass_featurematrix_generation.R
 Preprocessing_GSE98588_DLBCL_featurematrix_generation.R
 Preprocessing_PanALL.R
  
-Subtype analysis for each cohort
+## Subtype analysis for each cohort
 Preprocessing_MM_subtyping.R
 Preprocessing_DLBCL_subtyping.R
 Preprocessing_ALL_subtyping.R
 Preprocessing_AML_subtyping.R
  
-Methylation data processing
+## Methylation data processing
 Preprocessing_TCGA_AML_add_meth_probes.R
 Preprocessing_TCGA_meth_data_genelist.R
 Preprocessing_FIMM_AML_RRBS.R
 Preprocessing_AML_RRBS_meth_de_analysis.R
  
-scRNA data preprocessing for statistical analysis
+## scRNA data preprocessing for statistical analysis
 Preprocessing_scRNA_CLL_GSE111014.R
 Preprocessing_scRNA_FIMM_AML.R
 Preprocessing_scRNA_Galen_AML.R
@@ -97,10 +114,11 @@ Preprocessing_scRNA_PB_Citeseq.R
 Preprocessing_scRNA_Szabo_Tcells_dataprocessing.R
 Preprocessing_scRNA_Yang_NK_dataprocessing.R
 Preprocessing_scRNA_integrate_Tcells_NKcells.R
-
+```
 
 
 ## SessionInfo (R)
+```
 R version 3.6.0 (2019-04-26)
 Platform: x86_64-redhat-linux-gnu (64-bit)
 Running under: CentOS Linux 7 (Core)
@@ -195,3 +213,4 @@ other attached packages:
 [72] Biobase_2.44.0
 [73] BiocGenerics_0.30.0
 [74] methylSig_0.1
+```
