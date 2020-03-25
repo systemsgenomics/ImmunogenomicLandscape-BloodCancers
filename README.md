@@ -9,6 +9,8 @@ Scripts related to results presented in Dufva and Pölönen et al.
 
 ## Scripts to reproduce the analysis, plots and tables
 
+The processed and intermediate files for these scripts can be downloaded to reproduce the analysis. Inputs have been generated using the scripts under preprocessing.
+
 #### Figure 1, Figure S1:
 ```
 Fig1_plots.R (Figure 1F-H)
