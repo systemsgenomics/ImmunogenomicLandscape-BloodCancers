@@ -62,7 +62,7 @@ Fig7_Univariate_Coxph_survival.R (TableS7)
 Fig7_univariate_survival_forestplot.R (Fig7A, Fig7B-D, FigS7A-B, )
 Fig7_multivariable_regression_eNet_survival.R (Fig7E-F, FigS7C-G)
 ```
-#### Statistical association analysis, Supplementary tables 1-6
+#### Statistical association analysis, TableS1-6
 ```
 Statistical_analysis_correlations_BeatAML.R (TableS3-5)
 Statistical_analysis_correlations_CoMMpass.R (TableS4-6)
