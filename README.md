@@ -1,7 +1,7 @@
 # ImmunogenomicLandscape-BloodCancers
 
 ## Description:
-Scripts related to results presented in Dufva and Pölönen et al.
+Scripts related to results presented in Dufva and Pölönen et al. **Immunogenomic landscape of hematological malignancies**.
 
 - Modify the **working directory** to the scripts. setwd("path/data"), download data from ADD.
 
