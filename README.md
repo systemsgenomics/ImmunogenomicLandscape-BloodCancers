@@ -72,7 +72,7 @@ Statistical_analysis_correlations_TCGA_AML.R (TableS3-5)
 Statistical_analysis_correlations_TCGA_DLBCL.R
 ```
 ## Scripts related to data preprocessing (under folder preprocessing)
-These scripts are for reference only. Raw data and input data would have to be downloaded and processed for these scripts. Check the publication for raw data accession codes.
+These scripts are for reference only. Raw/processed/input data would have to be downloaded and processed for these scripts. Check the publication for data accession codes.
 
 #### Data Preprocessing
 ```
