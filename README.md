@@ -25,7 +25,7 @@ git clone https://github.com/systemsgenomics/ImmunogenomicLandscape-BloodCancers
 
 - Run the analysis (**Modify from the scripts**):
 	- **working directory** to the scripts. setwd("path/data")
-	- **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
+	- **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME typically points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
 
 
 ## Scripts to reproduce the analysis, plots and tables
