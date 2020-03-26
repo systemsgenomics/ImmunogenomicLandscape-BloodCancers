@@ -7,19 +7,24 @@ To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
 - Right now the project is private, ask us for permission to access the project
 - Install command line synapseclient
-´´´
+```
 pip install synapseclient
-´´´
+```
 - Download data:
 	a. Files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
-	b. All files and results  synapse get -r syn21823618 (downloads all files to current folder, 90Gb)
-- git clone https://github.com/systemsgenomics/ImmunogenomicLandscape-BloodCancers.git
+	b. All files and results (downloads all files to current folder, 90Gb)
+```
+synapse get -r syn21823618
+```
+- clone the git project:
+```
+git clone https://github.com/systemsgenomics/ImmunogenomicLandscape-BloodCancers.git
+```
 - Install the required R packages
-- Run the analysis
+- Run the analysis (**Modify from the scripts**):
+	- **working directory** to the scripts. setwd("path/data")
+	- **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
 
-- Modify the **working directory** to the scripts. setwd("path/data")
-
-- Modify the **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
 
 ## Scripts to reproduce the analysis, plots and tables
 
