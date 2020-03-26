@@ -7,7 +7,7 @@ To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
 - Right now the project is private, ask us for permission to access the project
 - Download data:
-	- Files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
+	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
 	- Programmatic access: 
 
 		- Install command line synapse client and bulk download (90Gb)
