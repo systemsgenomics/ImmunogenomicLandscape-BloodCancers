@@ -1,7 +1,8 @@
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "featurematrix/compute.pairwise.R"))
 source(file.path(GIT_HOME, "featurematrix/functions_generate_fm.R"))
+
 library(data.table)
 library(parallel)
 

@@ -1,11 +1,11 @@
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
+source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
+
 library(limma)
 library(edgeR)
 library(parallel)
 library(gridExtra)
-
-GIT_HOME="/research/users/ppolonen/git_home/"
-source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
-source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 

@@ -1,9 +1,15 @@
-GIT_HOME="/research/users/ppolonen/git_home/"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
 source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "common_scripts/statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "common_scripts/statistics/statistics_wrappers.R"))
 library(parallel)
+library(ggplot2)
+library(reshape2)
+library(RColorBrewer)
+library(ggrepel)
+library(gridExtra)
+library(survcomp)
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 
@@ -21,7 +27,6 @@ profile=profile[,colnames(profile)%in%colnames(data)]
 gm=annot$CytolyticScore
 
 # logical vectors for all diseases:
-source("/research/users/ppolonen/git_home/common_scripts/visualisation/plotting_functions.R")
 subclass2=get.logical(annovector = list(annot$subclasses), filterv = annot$CELLS_SORTED==0&annot$Sample.type%in%c("Prolif", "Cancer"))
 tbly2=get.logical(annovector = list(annot$tbLY), filterv = annot$CELLS_SORTED==0&annot$Sample.type%in%c("Prolif", "Cancer"))
 tbly2=tbly2[!names(tbly2)%in%"Lymphoma_BCL"]
@@ -127,11 +132,7 @@ save(res_all.filt, file="Hemap_cytolytic_correlated_genes_TableS2_onlysignif.Rda
 
 #***************************************************************************************************************************
 fun.plot=function(dat, main, xlab, ylab, aval=2, bval=0.2,cval=0.01,genelist=NULL, MAX=25, SIZE=3, T.SIZE=8, height=7.5, width=6){
-  library(ggplot2)
-  library(reshape2)
-  library(RColorBrewer)
-  library(ggrepel)
-  
+
   if(!is.null(genelist)){
     dat$significant=dat$gene%in%genelist
   }else{
@@ -195,13 +196,12 @@ fun.plot=function(dat, main, xlab, ylab, aval=2, bval=0.2,cval=0.01,genelist=NUL
           axis.title.y = element_text(colour="grey20",size=T.SIZE,face="plain", family="Helvetica"))  
   return(p)
 }
-library(gridExtra)
+
 
 # Figure2A:
 res_comb=d13=rowMeans(res[,c("DLBCL", "MCL", "FL", "CHL")])
 fc_res_comb=rowMeans(fc_res[,c("DLBCL", "MCL", "FL", "CHL")])
 
-library(survcomp)
 pval_comb=apply(10^-res_pval[,c("DLBCL", "MCL", "FL", "CHL")], 1, combine.test, method = "z.transform")
 
 data_comb=data.frame("gene"=names(res_comb), "Rho"=as.numeric(res_comb), "adj.pval"=pval_comb, "FCtoTNK"=as.numeric(fc_res_comb), "disease"="BCL", stringsAsFactors = F)

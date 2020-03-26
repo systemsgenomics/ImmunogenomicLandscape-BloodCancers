@@ -1,15 +1,15 @@
-GIT_HOME="/research/users/ppolonen/git_home/"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
+
 library(parallel)
 library(org.Hs.eg.db)
 library(seqinr)
 library(reshape2)
 
+setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 
 # load annotations
 annot = get(load("Hemap_immunology_Annotations.Rdata"))
-
-setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 
 # Genes that are expressed in normal cells:
 normal_res=get(load("dufva_mw_hgt_pval_normal_expressed.Rdata"))

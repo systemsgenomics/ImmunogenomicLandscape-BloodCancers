@@ -1,11 +1,12 @@
+GIT_HOME="/research/users/ppolonen/git_home/"
+source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
+
 library(limma)
 library(edgeR)
 library(parallel)
 library(gridExtra)
-
-GIT_HOME="/research/users/ppolonen/git_home/"
-source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
-source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
+library(ComplexHeatmap)
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 
@@ -154,20 +155,14 @@ cor(df_anno$Number_Antigens_expressed, sum_hypometh, use="complete.obs")
 
 df_anno=data.frame(df_anno, "Number_Antigens_methylated"=sum_hypometh)
 
-library(ComplexHeatmap)
 ha = HeatmapAnnotation(df=df_anno[,1,drop=F], Number.Antigens = anno_barplot(df_anno$Number_Antigens_expressed, axis = T, gp = gpar(fill = "indianred")), Number.Me.Antigens = anno_barplot(sum_hypometh, axis = T, gp = gpar(fill = "darkgoldenrod")), height = unit(4, "inch"))
 
 ccle_antg=t(scale(t(ccle_antg)))
 ccle_antg[ccle_antg<(-4)]=-4
 ccle_antg[ccle_antg>(4)]=4
 
+Heatmap(ccle_antg_meth, top_annotation = ha, name = "TestisAntigens", cluster_columns = F, cluster_rows = F)
+
 pdf("Fig6D_CCLE_ComplexHeatmap_testis_antigens.pdf", height = 15, width = 30)
 Heatmap(ccle_antg, top_annotation = ha, name = "TestisAntigens", cluster_columns = F, cluster_rows = F, col=colorRamp2(c(-4,-2, 0,2, 4), c("#063061","#579ec9", "white", "#d45d4a", "#67001e")))
 dev.off()
-
-# pdf("CCLE_ComplexHeatmap_testis_antigens_methylation.pdf", height = 15, width = 30)
-Heatmap(ccle_antg_meth, top_annotation = ha, name = "TestisAntigens", cluster_columns = F, cluster_rows = F)
-# dev.off()
-
-
-

@@ -1,3 +1,7 @@
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
+source(file.path(GIT_HOME, "scRNA/functions.scRNA.analysis.R"))
+source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
+
 library(Matrix)
 library(Seurat)
 library(data.table)
@@ -5,10 +9,6 @@ library(ComplexHeatmap)
 library(circlize)
 library(parallel)
 library(ggplot2)
-
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
-source(file.path(GIT_HOME, "scRNA/functions.scRNA.analysis.R"))
-source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 

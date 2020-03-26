@@ -1,4 +1,4 @@
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts/"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 library(RColorBrewer)
@@ -110,5 +110,3 @@ pdf("Fig6C_FigS6B_HEMAP_CGA_heatmap.pdf", height = 8, width = 10)
 Heatmap(plot_data, top_annotation = ha, name = "# CGA", col = col_fun, cluster_columns = F, cluster_rows = F, show_column_names = F, row_names_gp = gpar(fontsize = 8), width = unit(50, "mm"), height = unit(2*dim(plot_data)[1], "mm"))
 Heatmap(perc[unique(topgenes),], top_annotation = ha2, name = "% CGA", cluster_columns = F, cluster_rows = F, show_column_names = T, rect_gp = gpar(col = "white", lty = 1, lwd = 0.5), row_names_gp = gpar(fontsize = 8),column_names_gp = gpar(fontsize = 8), width = unit(50, "mm"), height = unit(1.75*dim(plot_data)[1], "mm"), col=colorRamp2(c(0,5,10,15,20,50,90), c("white", "#FCBBA1", "#FC9272", "#FB6A4A", "#EF3B2C", "#CB181D", "#99000D")))
 dev.off()
-
-

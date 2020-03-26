@@ -1,4 +1,4 @@
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "statistics/statistics_wrappers.R"))
@@ -484,43 +484,3 @@ pdf("Fig5B_DLBCL.pdf", height = 3.5, width = 3.5)
 plot.DotPlot.df(data.plot = df.DLBCL.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
 plot.DotPlot.df(data.plot = df.DLBCL.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), dot.scale = 3)
 dev.off()
-
-
-# Extra analysis
-# pdf("AML.DE.analysis.picked.pdf", height = 6.5, width = 4.25)
-# # all interesting:
-# plot.DotPlot.df(data.plot = df.AML.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.AML.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"))
-# dev.off()
-# 
-# pdf("AML.DE.analysis.picked_function.pdf", height = 4.5, width = 4.25)
-# plot.DotPlot.df(data.plot = df.AML.pick[df.AML.pick$features%in%inhibitory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.AML.pick[df.AML.pick$features%in%stimulatory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# dev.off()
-# 
-# pdf("ALL.DE.analysis.picked.pdf", height = 5, width = 4.5)
-# # all interesting:
-# plot.DotPlot.df(data.plot = df.ALL.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.ALL.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), dot.scale = 3)
-# dev.off()
-# 
-# pdf("ALL.DE.analysis.picked_function.pdf", height = 4, width = 4.5)
-# plot.DotPlot.df(data.plot = df.ALL.pick[df.ALL.pick$features%in%inhibitory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.ALL.pick[df.ALL.pick$features%in%stimulatory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# dev.off()
-# 
-# pdf("MM.DE.analysis.picked.pdf", height = 4, width = 4)
-# # all interesting:
-# plot.DotPlot.df(data.plot = df.MM.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.MM.pick, name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"),  dot.scale = 3)
-# dev.off()
-# 
-# pdf("MM.DE.analysis.picked_function.pdf", height = 3, width = 4)
-# plot.DotPlot.df(data.plot = df.MM.pick[df.MM.pick$features%in%inhibitory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.MM.pick[df.MM.pick$features%in%stimulatory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# dev.off()
-# 
-# pdf("DLBCL.DE.analysis.picked_function.pdf", height = 2.5, width = 3.5)
-# plot.DotPlot.df(data.plot = df.DLBCL.pick[df.DLBCL.pick$features%in%inhibitory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# plot.DotPlot.df(data.plot = df.DLBCL.pick[df.DLBCL.pick$features%in%stimulatory,], name.variable.1 = "Fold-Change (log2)", name.variable.2 = "FDR (-log10)", cols = c("blue", "white","red"), col.min = -2, col.max = 2, scale.min = 1, scale.max = 6, dot.scale = 3, number.legend.points = 6)
-# dev.off()

@@ -1,4 +1,5 @@
 library(RnBeads)
+
 # Set some analysis options
 rnb.options(
   filtering.sex.chromosomes.removal=T,

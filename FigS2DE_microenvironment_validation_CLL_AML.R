@@ -1,3 +1,8 @@
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
+source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
+source(file.path(GIT_HOME, "common_scripts/pathway_analysis/functions.GSEA.R"))
+
 library(Seurat)
 library(ggplot2)
 library(reshape2)
@@ -6,11 +11,7 @@ library(ggrepel)
 library(ComplexHeatmap)
 library(circlize)
 
-
-GIT_HOME="/research/users/ppolonen/git_home/"
-source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
-source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
-source(file.path(GIT_HOME, "common_scripts/pathway_analysis/functions.GSEA.R"))
+setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 
 # plot CLL genes:
 load("CLL_D0_scRNA.Rdata")

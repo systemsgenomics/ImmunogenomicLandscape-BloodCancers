@@ -1,7 +1,10 @@
-GIT_HOME="/research/users/ppolonen/git_home/"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
 source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "common_scripts/pathway_analysis/functions.GSEA.R"))
+
+library(GSVA)
+library(parallel)
 
 # FigureS2 A-B related analysis
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
@@ -51,8 +54,6 @@ try(system(command))
 datp=list.files(path = OUTDIR, pattern = "gsea_report_for_1_*.*.xls|gsea_report_for_feat_pos.*..xls", recursive = T, full.names = T)
 datn=list.files(path = OUTDIR, pattern = "gsea_report_for_0_*.*.xls|gsea_report_for_feat_neg.*..xls", recursive = T, full.names = T)
 
-library(parallel)
-
 # filter to contain only significant
 pwnames=scan(pipe("cut -f1 HALLMARKS.gmt"), "genesets")
 
@@ -90,9 +91,6 @@ rownames(gexp)=gsub(":.*.", "", gsub("N:GEXP:", "",rownames(gexp)))
 GENESETS="Combined_pathway_signatures_2017_filtered_robust.gmt"
 
 # get GSVA visualization for the pathways
-library(GSVA)
-library(parallel)
-
 # Geneset list
 Onc.pathways=read.delim(GENESETS, stringsAsFactors = FALSE, header=F, col.names = paste("V",1:max(count.fields(GENESETS, sep = '\t'), na.rm = T)), fill = TRUE)
 

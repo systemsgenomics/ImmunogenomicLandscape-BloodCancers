@@ -1,13 +1,10 @@
-# survival analysis for all scores:
-# many coefficients in survival analysis, using regularization and elastic net to select features for cox model.
-
-# Tools
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "statistics/statistics_wrappers.R"))
 source(file.path(GIT_HOME, "featurematrix/compute.pairwise.R"))
 source(file.path(GIT_HOME, "featurematrix/functions_generate_fm.R"))
+
 library(RColorBrewer)
 library(survival)
 library(data.table)
@@ -161,6 +158,9 @@ fun_forestplot=function(data, NAME="data", BOX=0.1,cex=2, colorv="black"){
                               xlab  = gpar(fontfamily = "Helvetica", cex = cex*1.5)))
   
 }
+
+# survival analysis for all scores:
+# many coefficients in survival analysis, using regularization and elastic net to select features for cox model.
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 

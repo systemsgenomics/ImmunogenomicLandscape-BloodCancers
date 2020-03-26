@@ -1,3 +1,8 @@
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
+source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
+source(file.path(GIT_HOME, "common_scripts/statistics/functions_statistics.R"))
+
 library(data.table)
 library(ggplot2)
 library(reshape2)
@@ -5,11 +10,6 @@ library(RColorBrewer)
 library(ggrepel)
 library(ComplexHeatmap)
 library(circlize)
-
-GIT_HOME="/research/users/ppolonen/git_home/"
-source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
-source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
-source(file.path(GIT_HOME, "common_scripts/statistics/functions_statistics.R"))
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 

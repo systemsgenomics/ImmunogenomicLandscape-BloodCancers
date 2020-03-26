@@ -1,4 +1,4 @@
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "pathway_analysis/functions.GSEA.R"))
@@ -86,7 +86,3 @@ colorf=colorRamp2(breaks = c(0, 2, 4, 6, 7),colors = c("grey75", "#f4acac", "#f7
 pdf("FigS6F_TSNE_CGA_hemap_MM_subtypes.pdf", width = 6.5, height = 6)
 Plot_color_vector(X = data.frame("x"=coordinates.subtype$x, "y"=coordinates.subtype$y), color = colorf(expressed_testis_num[match(coordinates.subtype$ID, names(expressed_testis_num))]), NAME = "TSNE_CGA_hemap.pdf", SIZE = 4)
 dev.off()
-
-# new_path="/research/users/ppolonen/miniconda2/bin"
-# old_path <- Sys.getenv("PATH")
-# Sys.setenv(PATH = paste(old_path, new_path, sep = ":"))

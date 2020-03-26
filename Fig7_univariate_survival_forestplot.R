@@ -1,10 +1,10 @@
-# Tools
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "statistics/statistics_wrappers.R"))
 source(file.path(GIT_HOME, "featurematrix/compute.pairwise.R"))
 source(file.path(GIT_HOME, "featurematrix/functions_generate_fm.R"))
+
 library(RColorBrewer)
 library(survival)
 library(data.table)
@@ -145,9 +145,3 @@ pdf("Fig7D_KM_CD163_LYZ.pdf", width = 2, height = 2.5)
 fun.kapplanMeier(TIME = TIME[logicalv[[5]]], STATUS = STATUS[logicalv[[5]]], CONTINUOUS  = as.numeric(gexp[logicalv[[5]],"CD163"]), conf.int = F, MONTHS=F, PVAL=1,LWD = 0.5, CONTINUOUS_SUMMARY = "75th_25th_percentile", INDIVIDUAL_GROUPS=F, NAME = "CD163")
 fun.kapplanMeier(TIME = TIME[logicalv[[5]]], STATUS = STATUS[logicalv[[5]]], CONTINUOUS  = as.numeric(gexp[logicalv[[5]],"LYZ"]), conf.int = F, MONTHS=F, PVAL=1,LWD = 0.5, CONTINUOUS_SUMMARY = "75th_25th_percentile", INDIVIDUAL_GROUPS=F, NAME = "LYZ")
 dev.off()
-
-# load("GSE98588_DLBCL_survival_data.Rdata")
-# 
-# pdf("Fig7_KM_CGA_DLBCL.pdf", width = 2, height = 2.5)
-# fun.kapplanMeier(TIME = TIME[logicalv[[1]]], STATUS = STATUS[logicalv[[1]]], GROUPS  = as.numeric(immunoscore[logicalv[[1]],"Freq.CGA"])>=4*1, conf.int = F, MONTHS=F, PVAL=1,LWD = 0.5, CONTINUOUS_SUMMARY = "75th_25th_percentile", INDIVIDUAL_GROUPS=F, NAME = "#CGA", COLORV =c("grey75", "red"))
-# dev.off()

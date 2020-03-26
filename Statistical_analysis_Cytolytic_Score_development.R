@@ -1,6 +1,10 @@
-# libraries
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
+source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
+source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
+source(file.path(GIT_HOME, "statistics/useful_functions.R"))
+source(file.path(GIT_HOME, "featurematrix/functions_generate_fm.R"))
+
 library(Hmisc)
-source("~/git_home/HEMAP/functions_generate_fm.R")
 library("caTools")
 library(parallel)
 require(Hmisc)
@@ -11,14 +15,6 @@ library(stats)
 library(reshape2)
 library(RColorBrewer)
 library(ComplexHeatmap)
-
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts/"
-source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
-source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
-source(file.path(GIT_HOME, "statistics/useful_functions.R"))
-
-Sys.setlocale('LC_ALL','C')
-
 
 # data loading
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")

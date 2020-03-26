@@ -1,10 +1,11 @@
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "statistics/statistics_wrappers.R"))
 source(file.path(GIT_HOME, "pathway_analysis/functions.GSEA.R"))
 source(file.path(GIT_HOME, "scRNA/functions.scRNA.analysis.R"))
 source(file.path(GIT_HOME, "statistics/useful_functions.R"))
+
 library(Matrix)
 library(Seurat)
 library(data.table)

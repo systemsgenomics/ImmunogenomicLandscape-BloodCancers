@@ -1,4 +1,4 @@
-GIT_HOME="/research/users/ppolonen/git_home/common_scripts"
+GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
 source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
 source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
 source(file.path(GIT_HOME, "pathway_analysis/functions.GSEA.R"))
@@ -8,6 +8,7 @@ library(parallel)
 library(ComplexHeatmap)
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
+
 t.df = read.delim("t.antigen_df.txt", stringsAsFactors=F, header=T)
 t.df=t.df[order(t.df[,3]),]
 
