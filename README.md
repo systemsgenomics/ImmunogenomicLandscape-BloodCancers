@@ -3,7 +3,8 @@
 ## Description:
 Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic landscape of hematological malignancies.
 
-To reproduce parts of the results:
+
+### To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
 - Get access to synapse project syn21823618
 	- Right now the project is private, contact us for permission to access (provide your synapseID).
