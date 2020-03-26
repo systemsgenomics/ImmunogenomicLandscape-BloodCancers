@@ -18,9 +18,9 @@ To reproduce parts of the results:
 		```
 
 - clone the git project:
-```
-git clone https://github.com/systemsgenomics/ImmunogenomicLandscape-BloodCancers.git
-```
+		```
+		git clone https://github.com/systemsgenomics/ImmunogenomicLandscape-BloodCancers.git
+		```
 
 - Install the required R packages
 
