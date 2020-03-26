@@ -10,11 +10,11 @@ To reproduce parts of the results:
 	- Files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
 	- Programmatic access: 
 
-Install command line synapse client and bulk download (90Gb)
-```
-pip install synapseclient
-synapse get -r syn21823618
-```
+		- Install command line synapse client and bulk download (90Gb)
+		```
+		pip install synapseclient
+		synapse get -r syn21823618
+		```
 
 - clone the git project:
 ```
