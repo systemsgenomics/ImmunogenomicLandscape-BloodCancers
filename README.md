@@ -5,10 +5,10 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 
 To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
-- Right now the project is private, ask us for permission to access the project
-- Download data:
+- Right now the project is private, ask us for permission to access the project (send us email and provide your synapseID)
+- Download project data:
 	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
-	- Programmatic access: 
+	- Or programmatic access: 
 
 		- Install command line synapse client and bulk download (90Gb)
 		```
