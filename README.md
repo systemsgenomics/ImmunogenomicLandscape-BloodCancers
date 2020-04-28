@@ -236,4 +236,5 @@ other attached packages:
 [73] BiocGenerics_0.30.0
 [74] methylSig_0.1
 [75] CePa_0.7.0
+[76] viridis_0.5.1
 ```
