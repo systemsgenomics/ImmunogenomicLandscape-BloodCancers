@@ -1,6 +1,6 @@
 GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
-source(file.path(GIT_HOME, "scRNA/functions.scRNA.analysis.R"))
-source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
+source(file.path(GIT_HOME, "common_scripts/scRNA/functions.scRNA.analysis.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
 
 library(Matrix)
 library(Seurat)

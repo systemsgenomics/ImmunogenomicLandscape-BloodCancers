@@ -1,6 +1,6 @@
 GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
-source(file.path(GIT_HOME, "scRNA/functions.scRNA.analysis.R"))
-source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
+source(file.path(GIT_HOME, "common_scripts/scRNA/functions.scRNA.analysis.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
 library(Seurat)
 
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
@@ -22,10 +22,6 @@ prop1=data.frame(prop.table(table(FIMM[["SingleR.label"]][,1], FIMM[["batch"]][,
 prop2=data.frame(prop.table(table(GALEN[["SingleR.label"]][,1], GALEN[["batch"]][,1]), margin=2))
 prop3=data.frame(prop.table(table(HCA[["SingleR.label"]][,1], HCA[["batch"]][,1]), margin=2))
 prop4=data.frame(prop.table(table(HCA[["SingleR.label"]][,1], rep("HCA", dim(HCA)[2])), margin=2))
-
-# plot lineage to map:
-s.anno=data.table::fread("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/scRNA/samples_scRNA_allData.txt", data.table=F)[c(1,3,4),]
-s.anno[is.na(s.anno)]=""
 
 # plot MDS-like samples to map:
 FIMM[["MDS"]]=ifelse(grepl("5897|3667|5249", FIMM[["batch"]][,1]), "MDS-like", "other")

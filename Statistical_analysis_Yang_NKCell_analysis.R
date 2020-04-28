@@ -1,6 +1,6 @@
 GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
-source(file.path(GIT_HOME, "scRNA/functions.scRNA.analysis.R"))
-source(file.path(GIT_HOME, "visualisation/plotting_functions.R"))
+source(file.path(GIT_HOME, "common_scripts/scRNA/functions.scRNA.analysis.R"))
+source(file.path(GIT_HOME, "common_scripts/visualisation/plotting_functions.R"))
 
 library(Matrix)
 library(Seurat)
@@ -13,8 +13,8 @@ library(ggplot2)
 setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNOLOGY/Published_data_figures")
 
 #****************************** plot Yang scores and immunoscores, singleR etc ******************************
-geneset1=unique(data.table::fread("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/scRNA/Yang_2019.txt", data.table = F, header = F))
-geneset=unique(data.table::fread("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/scRNA/Yang_2019_allgenes.txt", data.table = F, header = T)) # 41467_2019_11947_MOESM5_ESM
+geneset1=unique(data.table::fread("Yang_2019.txt", data.table = F, header = F))
+geneset=unique(data.table::fread("Yang_2019_allgenes.txt", data.table = F, header = T)) # 41467_2019_11947_MOESM5_ESM
 
 geneset=geneset[order(geneset$cluster, -geneset$avg_logFC),]
 geneset=geneset[!geneset$avg_logFC<0,]

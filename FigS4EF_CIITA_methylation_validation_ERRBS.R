@@ -19,8 +19,8 @@ coords=read.delim("cancermap_GSE86952_AML_15pct_genes_BH-SNE_mean-shift_BW1.5.tx
 coords=coords[match(annot$X.Sample_title, as.character(coords$ID)),]
 annot=annot[!is.na(coords[,1]),]
 
-meth=get(load("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/data/GSE86952_AML_RRBS/meth_hlalow_pml.Rdata"))
-myDiffSigboth=get(load("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/data/GSE86952_AML_RRBS/myDiffSigboth_hlalow_pml.Rdata"))
+meth=get(load("meth_hlalow_pml.Rdata"))
+myDiffSigboth=get(load("myDiffSigboth_hlalow_pml.Rdata"))
 
 #******************************* visualize location **********************************
 

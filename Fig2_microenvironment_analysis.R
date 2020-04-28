@@ -154,7 +154,7 @@ fun.plot=function(dat, main, xlab, ylab, aval=2, bval=0.2,cval=0.01,genelist=NUL
   
   dat$size.point=ifelse(dat$plot, 2.4, 0.6)
   
-  myColors <- data.frame(c("grey85","#E41A1C", "grey50","#377EB8"), c("", "CTL/NK gene", "Stromal/cancer gene (Rho < 0)", "Stromal/cancer gene (Rho > 0)"), stringsAsFactors = F)
+  myColors <- data.frame(c("grey85","#E41A1C", "grey85","#377EB8"), c("", "CTL/NK gene", "Stromal/cancer gene (Rho < 0)", "Stromal/cancer gene (Rho > 0)"), stringsAsFactors = F)
   myColors=myColors[match(unique(dat$category), myColors[,2]),1]
   names(myColors) <- unique(dat$category)
   

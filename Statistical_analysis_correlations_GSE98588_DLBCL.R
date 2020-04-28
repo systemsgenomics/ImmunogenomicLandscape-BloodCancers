@@ -1,7 +1,7 @@
 GIT_HOME="/research/users/ppolonen/git_home/ImmunogenomicLandscape-BloodCancers/"
-source(file.path(GIT_HOME, "statistics/functions_statistics.R"))
-source(file.path(GIT_HOME, "featurematrix/compute.pairwise.R"))
-source(file.path(GIT_HOME, "featurematrix/functions_generate_fm.R"))
+source(file.path(GIT_HOME, "common_scripts/statistics/functions_statistics.R"))
+source(file.path(GIT_HOME, "common_scripts/featurematrix/compute.pairwise.R"))
+source(file.path(GIT_HOME, "common_scripts/featurematrix/functions_generate_fm.R"))
 
 library(data.table)
 library(parallel)
@@ -12,8 +12,8 @@ setwd("/research/groups/sysgen/PROJECTS/HEMAP_IMMUNOLOGY/petri_work/HEMAP_IMMUNO
 fm=get(load("GSE98588_fm.Rdata"))
 name=""
 
-# fm=fm[,fm["B:SAMP:COO_byGEP_GCB",]==1]
-# name="_GCB"
+fm=fm[,fm["B:SAMP:COO_byGEP_GCB",]==1]
+name="_GCB"
 # fm=fm[,fm["B:SAMP:COO_byGEP_ABC",]==1]
 # name="_ABC"
 
@@ -27,9 +27,9 @@ extrafeatures=extrafeatures[!grepl("CGA|Cytolytic",extrafeatures)]
 
 cnv_annot=fread("41591_2018_16_MOESM8_ESM_CNV_ANNOT.txt", data.table=F)
 
+l.regulon.gene=regulon.feats(fm, genelist, cnv_annot)
 
 # HLA Score associations:
-l.regulon.gene=regulon.feats(fm, genelist, cnv_annot)
 results=pairwise.correlation(l.regulon.gene[grep("HLA", names(l.regulon.gene))], fm, extrafeatures,filter.val = 5, cores=10, adjust.method = "BH", fisher.alternative = "greater")
 results2=filter.pairwise.res(results)
 
@@ -44,6 +44,7 @@ results2=filter.pairwise.res(results)
 
 #***********************************************************************
 fwrite(results2, paste0("TableS3_GSE98588_DLBCL_CytScore_correlations", name, ".tsv"), sep ="\t")
+fwrite(results, paste0("TableS3_GSE98588_DLBCL_CytScore_correlations", name, "_all.tsv"), sep ="\t")
 #***********************************************************************
 
 
