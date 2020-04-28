@@ -235,4 +235,5 @@ other attached packages:
 [72] Biobase_2.44.0
 [73] BiocGenerics_0.30.0
 [74] methylSig_0.1
+[75] CePa_0.7.0
 ```
