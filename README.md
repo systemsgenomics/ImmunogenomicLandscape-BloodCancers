@@ -12,7 +12,7 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
 	- Programmatic access (synapse):
 		```
-		pip install synapeclient
+		pip install synapseclient
 		synapse get synapseID
 		```
 		
