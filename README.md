@@ -10,12 +10,15 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 	- Right now the project is private, contact us for permission to access (provide your synapseID).
 - Download project data:
 	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
-	- Or programmatic access: 
-
-		- Install command line synapse client and bulk download (90Gb)
+	- Programmatic access (synapse):
 		```
-		pip install synapseclient
-		synapse get -r syn21823618
+		pip install synapeclient
+		synapse get syn21823618
+		```
+		
+	- Or bulk download (Zenodo 25gb): 
+
+		```
 		```
 
 - clone the git project:
