@@ -13,7 +13,7 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 	- Programmatic access (synapse):
 		```
 		pip install synapeclient
-		synapse get syn21823618
+		synapse get synapseID
 		```
 		
 	- Or bulk download (Zenodo 25gb): 
