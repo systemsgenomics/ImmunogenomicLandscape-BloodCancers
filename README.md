@@ -3,6 +3,11 @@
 ## Description:
 Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic landscape of hematological malignancies.
 
+## Note:
+If you use the data, analysis, results, Please cite:
+
+Data DOI: 10.7303/syn21991014
+
 
 ### To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
