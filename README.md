@@ -20,13 +20,13 @@ Data DOI: 10.7303/syn21991014
 		pip install synapseclient
 		synapse get synapseID
 		```
-	- Synapse bulk:
+	- Synapse bulk (70 gb):
 		```
 		pip install synapseclient
 		synapse get syn21991014 -r
 		```
 		
-	- Or bulk download (Zenodo 25gb): 
+	- Or zip bulk download (Zenodo 25gb): 
 
 		```
 		```
