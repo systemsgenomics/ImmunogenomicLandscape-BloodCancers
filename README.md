@@ -14,9 +14,9 @@ If you use Hemap data, cite also:
 - Hemap: An interactive online resource for characterizing molecular phenotypes across hematologic malignancies
 Petri Pölönen, Juha Mehtonen, Jake Lin, Thomas Liuksiala, Sergei Häyrynen, Susanna Teppo, Artturi Mäkinen, Ashwini Kumar, Disha Malani, Virva Pohjolainen, Kimmo Porkka, Caroline A. Heckman, Patrick May, Ville Hautamäki, Kirsi J. Granberg, Olli Lohi, Matti Nykter and Merja Heinäniemi Cancer Res April 2 2019 DOI: 10.1158/0008-5472.CAN-18-2970
 
-- If you use other publicly available data sets that were analyzed here (TCGA AML/DLBCL, Chapuy et al., Tyner et al., etc), please also cite the original research.
+If you use other publicly available data sets that were analyzed here (TCGA AML/DLBCL, Chapuy et al., Tyner et al., etc), please also cite the original research.
 
-- If you are only interested in the data sets analyzed here, check **datasets_synapseID.txt** for synapse accession codes.
+If you are only interested in the data sets analyzed here, check **datasets_synapseID.txt** for synapse accession codes.
 
 ### To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
