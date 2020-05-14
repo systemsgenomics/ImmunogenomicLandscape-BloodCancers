@@ -4,11 +4,13 @@
 Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic landscape of hematological malignancies.
 
 ## Note:
+
 If you use the data, analysis, results, Please cite:
 
 Dufva Pölönen et al. ADD FINAL
 
 If you use Hemap data, cite also:
+
 Hemap: An interactive online resource for characterizing molecular phenotypes across hematologic malignancies
 Petri Pölönen, Juha Mehtonen, Jake Lin, Thomas Liuksiala, Sergei Häyrynen, Susanna Teppo, Artturi Mäkinen, Ashwini Kumar, Disha Malani, Virva Pohjolainen, Kimmo Porkka, Caroline A. Heckman, Patrick May, Ville Hautamäki, Kirsi J. Granberg, Olli Lohi, Matti Nykter and Merja Heinäniemi Cancer Res April 2 2019 DOI: 10.1158/0008-5472.CAN-18-2970
 
