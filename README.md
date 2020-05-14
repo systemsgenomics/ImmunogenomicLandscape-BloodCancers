@@ -6,17 +6,17 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 ## Note:
 
 If you use the data, analysis, results, Please cite:
+- Dufva Pölönen et al. ADD FINAL
 
-Dufva Pölönen et al. ADD FINAL
+- Data DOI: 10.7303/syn21991014
 
 If you use Hemap data, cite also:
-
-Hemap: An interactive online resource for characterizing molecular phenotypes across hematologic malignancies
+- Hemap: An interactive online resource for characterizing molecular phenotypes across hematologic malignancies
 Petri Pölönen, Juha Mehtonen, Jake Lin, Thomas Liuksiala, Sergei Häyrynen, Susanna Teppo, Artturi Mäkinen, Ashwini Kumar, Disha Malani, Virva Pohjolainen, Kimmo Porkka, Caroline A. Heckman, Patrick May, Ville Hautamäki, Kirsi J. Granberg, Olli Lohi, Matti Nykter and Merja Heinäniemi Cancer Res April 2 2019 DOI: 10.1158/0008-5472.CAN-18-2970
 
-If you use other publicly available data sets that were analyzed here (TCGA AML/DLBCL, Chapuy et al., Tyner et al., etc), please also cite the original research.
+- If you use other publicly available data sets that were analyzed here (TCGA AML/DLBCL, Chapuy et al., Tyner et al., etc), please also cite the original research.
 
-Data DOI: 10.7303/syn21991014
+- If you are only interested in the data sets analyzed here, check **datasets_synapseID.txt** for synapse accession codes.
 
 ### To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
@@ -24,7 +24,7 @@ Data DOI: 10.7303/syn21991014
 	- Right now the project is private, contact us for permission to access (provide your synapseID).
 - Download project data:
 	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21991014/files/) (Recommended) 
-	- Programmatic access (synapse):
+	- Programmatic access (synapse, check synapseID_Filename.txt for accession codes):
 		```
 		pip install synapseclient
 		synapse get synapseID
