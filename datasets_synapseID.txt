@@ -1,0 +1,44 @@
+Hemap gene expression	syn21991190	data9544_with_gene_symbols.RData
+Hemap annotations	syn21995216	Hemap_immunology_Annotations.Rdata
+Hemap gene expression mixture model	syn21995419	mixtureM_profile.Rdata
+Hemap ALL TSNE coordinates, subtypes	syn21995192	Hemap_ALL_subtypes.Rdata
+Hemap ALL TSNE coordinates, subtypes	syn21995203	Hemap_AML_subtypes.Rdata
+Hemap AML survival data	syn21995208	Hemap_AML_survival_data.Rdata
+Hemap DLBCL subtypes	syn21995214	Hemap_DLBCL_subtypes.Rdata
+Hemap DLBCL survival data	syn21995215	Hemap_DLBCL_survival_data.Rdata
+Hemap MM TSNE coordinates, subtypes	syn21995219	Hemap_MM_subtypes.Rdata
+Hemap MM survival data	syn21995234	Hemap_MM_survival_data.Rdata
+		
+Chapuy DLBCL subtypes, gene expression	syn21991158	Chapuy_DLBCL_subtypes.Rdata
+Chapuy DLBCL  annotations	syn21991352	GSE98588_annot.Rdata
+Chapuy DLBCL  featurematrix	syn21991358	GSE98588_fm.Rdata
+Chapuy DLBCL expression mixture model	syn21991356	GSE98588_DLBCL_mixtureM_profile.Rdata
+Chapuy DLBCL survival data	syn21991357	GSE98588_DLBCL_survival_data.Rdata
+		
+BeatAML annotations	syn21991028	BeatAML_fm_annot.Rdata
+BeatAML featurematrix	syn21991029	BeatAML_fm.Rdata
+BeatAML TSNE coordinates, subtypes	syn21991030	BeatAML_subtypes.Rdata
+BeatAML survival data	syn21991031	BeatAML_survival_data.Rdata
+		
+TCGA AML featurematrix	syn21991203	DUFVA_TCGA_AML_FM_meth.Rdata
+TCGA DLBCL featurematrix	syn21991204	DUFVA_TCGA_DLBCL_FM_meth.Rdata
+TCGA AML  TSNE coordinates, subtypes, gene expression	syn21995721	TCGA_AML_subtypes.Rdata
+TCGA AML  survival data	syn21995722	TCGA_AML_survival_data.Rdata
+		
+CoMMpass annotations	syn21995423	MM_COMPASS_ANNOT.Rdata
+CoMMpass featurematrix	syn21995455	MM_COMPASS_FM.Rdata
+CoMMpass TSNE coordinates, subtypes, gene expression	syn21991167	CoMMpass_MM_subtypes.Rdata
+CoMMpass survival data	syn21991168	CoMMpass_survival_data.Rdata
+		
+Reddy et al. Annotations	syn21995528	REDDY_DLBCL_annot.Rdata
+Reddy et al. Featurematrix	syn21995529	REDDY_DLBCL_fm.Rdata
+Reddy et al. Subtypes	syn21995531	Reddy_DLBCL_subtypes.Rdata
+Reddy et al. Survival data	syn21995553	Reddy_DLBCL_survival_data.Rdata
+Penan ALL filtered samples TSNE coordinates, subtypes, gene expression	syn21995497	Pecan_ALL_835_subtypes.Rdata
+Penan ALL TSNE coordinates, subtypes, gene expression	syn21995526	PecanALL_subtypes.Rdata
+		
+AML scRNA Seurat object	syn21991338	FIMM_AML_scRNA.Rdata
+AML+HCA scRNA T cells Seurat object	syn21991316	FIMM_AML_HCA_T_scRNA.Rdata
+AML+HCA+Yang scRNA NK cells Seurat object	syn21991317	FIMM_AML_HCA_Yang_NK_scRNA.Rdata
+Human cell atlas bone marrow Seurat object	syn21995190	HCA_scRNA.Rdata
+Galen et al. Seurat object	syn21991020	AML_Galen_scRNA.Rdata
