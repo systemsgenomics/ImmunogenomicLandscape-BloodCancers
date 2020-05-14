@@ -3,19 +3,32 @@
 ## Description:
 Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic landscape of hematological malignancies.
 
+## Note:
+If you use the data, analysis, results, Please cite:
+
+Data DOI: 10.7303/syn21991014
+
 
 ### To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
-- Get access to synapse project syn21823618
+- Get access to synapse project syn21991014
 	- Right now the project is private, contact us for permission to access (provide your synapseID).
 - Download project data:
-	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21823618/files/) (Recommended) 
-	- Or programmatic access: 
-
-		- Install command line synapse client and bulk download (90Gb)
+	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21991014/files/) (Recommended) 
+	- Programmatic access (synapse):
 		```
 		pip install synapseclient
-		synapse get -r syn21823618
+		synapse get synapseID
+		```
+	- Synapse bulk (70 gb):
+		```
+		pip install synapseclient
+		synapse get syn21991014 -r
+		```
+		
+	- Or zip bulk download (Zenodo 25gb): 
+
+		```
 		```
 
 - clone the git project:
@@ -25,9 +38,9 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 
 - Install the required R packages
 
-- Run the analysis (**Modify from the scripts**):
-	- **working directory** to the scripts. setwd("path/data")
-	- **GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME typically points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
+- Run the analysis:
+	- **set working directory** to the folder with the data. setwd("path/data")
+	- **modify GIT_HOME** variable in R script (folder where the git folder is cloned). GIT_HOME typically points to **common_scripts** that contains various statistical and visualisation tools that were used in the analysis.
 
 
 ## Scripts to reproduce the analysis, plots and tables
@@ -36,6 +49,7 @@ The processed and intermediate files for these scripts can be downloaded to repr
 
 #### Figure 1, Figure S1:
 ```
+Fig1C_AML_cytscore_flow_RNAseq_comparison.R (Fig1C)
 Fig1_plots.R (Figure 1F-H)
 Statistical_analysis_Cytolytic_Score_development.R (FigureS1B, G-I)
 ```
@@ -47,42 +61,60 @@ FigS2DE_microenvironment_validation_CLL_AML.R (FigS2D-E)
 ```
 #### Figure 3, Figure S3 and Table S3:
 ```
-Fig3_plots_scRNA.R  (Fig3F-H and K, FigS3K and O)
+Fig3A_DLBCL_cytscore_oncoprint.R (Fig3A)
+Fig3BC_DLBCL_cytscore_boxplots.R (Fig3B-C)
+Fig3D_TCGA_AML_cytscore_oncoprint.R (Fig3D)
 Fig3_FigS3_MDSsignature.R (Fig3E, FigS3D)
-FigS3L.R (TableS3 tab, FigS3L)
+Fig3_plots_scRNA.R  (Fig3F-H and K, FigS3K and O)
 Statistical_analysis_DE_analysis_MDSlike.R (TableS3 tab)
 Statistical_analysis_scRNA_MDSlike_analysis.R  (TableS3 tabs)
 Statistical_analysis_Szabo_TCell_analysis.R (Fig3I, FigS3M)
 Statistical_analysis_Yang_NKCell_analysis.R (Fig3J, FigS3N)
+FigS3L.R (TableS3 tab, FigS3L)
 ```
 #### Figure 4, Figure S4 and Table S4:
 ```
 Statistical_analysis_HLAII_Score_development.R (FigS4A-B)
 Fig4D_TCGA_AML_complexheatmap_CIITA.R (Fig4D)
+Statistical_analysis_FIMM_AML_RRBS.R (Fig4G and H, FigS4L)
+FigS4C_AML_HLAIIscore_flow_RNAseq_comparison.R (FigS4C)
+FigS4D_TCGA_AML_global_hypermethylation.R (FigS4D)
 FigS4EF_CIITA_methylation_validation_ERRBS.R (FigS4E-F)
 FigS4K_CCLE_CIITA_methylation.R (FigS4K)
 FigS4J_CIITA_methylation_validation_GSE49031.R (FigS4J)
-FigS4D_TCGA_AML_global_hypermethylation.R (FigS4D)
-Statistical_analysis_FIMM_AML_RRBS.R (Fig4G and H, FigS4L)
 ```
 #### Figure 5, Figure S5 and Table S5:
 ```
+Fig5A_ligands_heatmap.R (Fig5A)
 Fig5_DE_analysis_costim.R  (Fig5B, FigS5B, Table S5 tabs)
+Fig5C_TCGA_AML_ligand_correlation_volcanoplot.R (Fig5C)
+Fig5D_S5G_DLBCL_GSE98588_ligand_boxplots.R (Fig5D, FigS5G)
+Fig5E_PDL1_IHC_boxplot.R (Fig5E)
+Fig5F_VISTA_IHC_boxplot.R (Fig5F)
+Fig5G_CD70_CRISPR_T cell_stimulation.R (Fig5G)
 FigS5C.R (FigS5C)
+FigS5DE_TCGA_ligand_methylation_AML_DLBCL_comparison.R (FigS5D-E)
 ```
 #### Figure 6, Figure S6 and Table S6:
 ```
 Fig6B_S6F_CGA_tSNEplot_hemap.R (Fig6B, FigS6F)
 Fig6C_S6B_CGA_Hemap.R (Fig6C, FigS6B)
+Fig6D_CCLE_CGA_heatmap.R (Fig6D)
+Fig6F_CoMMpass_CGA_boxplot.R (Fig6F)
+Fig6G_CoMMpass_CGA_oncoprint.R (Fig6G)
+Fig6H_DLBCL_GSE98588_CGA_oncoprint.R (Fig6H)
 Fig6H_FigS6H_CGA_heatmap_GSE98588.R (Fig6H, FigS6H, FigS6I)
 FigS6G_CGA_GSEA_hemapMM.R (FigS6G)
-Fig6D_CCLE_CGA_methylation.R (Fig6D)
+FigS6A_GTEx_CGA_heatmap.R (FigS6A)
+FigS6C_Hemap_CGA_dotplots.R (FigS6C)
+FigS6D_TCGA_antigen_methylation.R (FigS6D)
+FigS6E_CoMMpass_CGA_heatmap.R (FigS6E)
 Statistical_analysis_CGA_discovery_Hemap.R
 ```
 #### Figure 7, Figure S7 and Table S7:
 ```
 Fig7_Univariate_Coxph_survival.R (TableS7)
-Fig7_univariate_survival_forestplot.R (Fig7A, Fig7B-D, FigS7A-B, )
+Fig7_univariate_survival_forestplot.R (Fig7A, Fig7B-D, FigS7A-B)
 Fig7_multivariable_regression_eNet_survival.R (Fig7E-F, FigS7C-G)
 ```
 #### Statistical association analysis, TableS1-6
