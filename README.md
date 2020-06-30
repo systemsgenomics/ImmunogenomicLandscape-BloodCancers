@@ -20,8 +20,7 @@ If you are only interested in the data sets analyzed here, check **datasets_syna
 
 ### To reproduce parts of the results:
 - Get synapse credentials https://www.synapse.org
-- Get access to synapse project syn21991014
-	- Right now the project is private, contact us for permission to access (provide your synapse credentials).
+- Access synapse project syn21991014
 - Download project data:
 	- Input files individually (see scripts for filenames and download from https://www.synapse.org/#!Synapse:syn21991014/files/) (Recommended) 
 	- Programmatic access (synapse, check synapseID_Filename.txt for accession codes):
@@ -33,11 +32,6 @@ If you are only interested in the data sets analyzed here, check **datasets_syna
 		```
 		pip install synapseclient
 		synapse get syn21991014 -r
-		```
-		
-	- Or zip bulk download (Zenodo 25gb): 
-
-		```
 		```
 
 - clone the git project:
