@@ -6,7 +6,7 @@ Scripts related to results presented in Dufva and Pölönen et al. Immunogenomic
 ## Note:
 
 If you use the data, analysis, results, Please cite:
-- Dufva Pölönen et al. ADD FINAL
+- Dufva Pölönen et al. https://doi.org/10.1016/j.ccell.2020.06.002
 
 - Data DOI: 10.7303/syn21991014
 
